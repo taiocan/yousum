@@ -1,0 +1,13 @@
+[build]
+target-dir = "target"
+
+[target.x86_64-pc-windows-msvc]
+rustflags = ["-C", "link-arg=/DEBUG:NONE", "-C", "link-arg=/INCREMENTAL:NO"]
+
+[profile.dev]
+debug = 0
+split-debuginfo = "off"
+
+[profile.test]
+debug = 0
+split-debuginfo = "off"
